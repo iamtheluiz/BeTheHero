@@ -13,3 +13,7 @@ Extensões e Configurações:
 * Dracula Official (Tema)
 * Material Icon Theme (Adiciona ícones de acordo com o tipo de arquivo)
 * [**Vídeo da Rocketseat**](https://www.youtube.com/watch?v=c7P03kkrEG8)
+
+## Extensões para Navegador
+
+* JSON Viewer
