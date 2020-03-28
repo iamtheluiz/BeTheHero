@@ -41,3 +41,33 @@ Diferente do Javascript puro, as frameworks de Javascript adicionam diversas fun
 ```bash
 npx create-react-app frontend
 ```
+
+## Mobile
+
+### Abordagem Tradicional
+
+Para desenvolver para Android e IOS são utilizadas linguagens diferentes, dentre elas o Objective-C, Swift, Java e Kotlin, cada um gerando um pacote com o código da aplicação, sendo possível de instalar nos dispositivos móveis.
+
+Mas isso faz com que seja necessário fazer duas aplicações para cada sistema operacional, fazendo com que qualquer alteração e implementação tenham de ser feitas duas vezes.
+
+### Abordagem do React Native
+
+Aqui é desenvolvida uma única aplicação, que depois gera um .apk (Android) e um .ipa (IOS), não sendo necessário utilizar mais linguagens durante o desenvolvimento, e possibilitando reutilizar todo o conhecimento do back-end e do front-end para o mobile.
+
+Essas aplicações são consideradas nativas, pois o React Native implementa em sua aplicação o Javascript Core, que é um framework que possibilita que o sistema operacional mobile consiga interpretar código Javascript para criar e manipular interfaces, não sendo um código convertido. Isso faz com que sua performance seja muito próxima da do desenvolvimento com código nativo.
+
+### Por que utilizaremos o Expo?
+
+O Expo é um conjunto de ferramentas (framework) para React Native que disponibiliza bibliotecas para utilizar as funções e os recursos que seu celular possui (como câmera, gps, mapa, sensores, etc).
+
+#### Sem o Expo
+
+Dessa forma, é necessário instalar as SDK's do Android e IOS para gerar o aplicativo final. Isso faz com que o desenvolvimento seja mais pesado, pois são ferramentas mais complicadas de configurar e executar.
+
+#### Com o Expo
+
+O Expo é um aplicativo instalado no seu celular, que possui todas as API's nativas do celular, não sendo necessário instalar as dependências por meio dos SDK's, facilitando o trabalho e as necessidades para desenvolvimento.
+
+### Dificuldades
+
+O Expo não pode ser usado para todas as aplicações, pois ele tem suas limitações, sendo extremamente importante diferenciar quando uma aplicação pode ou não ser desenvolvida com ele.
