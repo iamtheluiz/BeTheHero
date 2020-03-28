@@ -29,3 +29,5 @@ Esse projeto foi desenvolvido durante a "Semana OmniStack" da Rocketseat:
 ## 📚 Documentações Extras
 
 * **Conhecendo a OmniStack** - [Conhecendo_a_stack.md](docs/conhecendo_a_stack.md)
+* **Ferramentas de Desenvolvimento** - [Ferramentas_de_desenvolvimento.md](docs/ferramentas_de_desenvolvimento.md)
+* **Arquitetura da Aplicação** - [Arquitetura_da_aplicação.md](docs/arquitetura_da_aplicação.md)
