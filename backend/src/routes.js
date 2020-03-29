@@ -1,10 +1,13 @@
+// Módulos
 const express = require('express');
+
+// Controllers
+const OngController = require('./controllers/OngController');
 
 const routes = express.Router();
 
 // Main route
-routes.get('/', (req, res) => {
-  return res.json({ message: 'Hello World!'});
-});
+routes.get('/ongs', OngController.index);
+routes.post('/ongs', OngController.create);
 
 module.exports = routes;
