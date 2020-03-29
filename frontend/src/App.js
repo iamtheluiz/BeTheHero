@@ -1,8 +1,14 @@
 import React from 'react';
 
+// Components
+import Logon from './pages/Logon';
+
+// Styles
+import './global.css';
+
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <Logon/>
   );
 }
 
