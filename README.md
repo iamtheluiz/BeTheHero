@@ -15,7 +15,6 @@
 ## ✅ Requisitos
 
 - [NodeJS](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/)
 - [React](https://reactjs.org/) - Frontend
 - [React Native](https://facebook.github.io/react-native/) - Mobile Development
 
@@ -31,3 +30,4 @@ Esse projeto foi desenvolvido durante a "Semana OmniStack" da Rocketseat:
 * **Conhecendo a OmniStack** - [Conhecendo_a_stack.md](docs/conhecendo_a_stack.md)
 * **Ferramentas de Desenvolvimento** - [Ferramentas_de_desenvolvimento.md](docs/ferramentas_de_desenvolvimento.md)
 * **Arquitetura da Aplicação** - [Arquitetura_da_aplicação.md](docs/arquitetura_da_aplicação.md)
+* **O Backend** - [O_backend.md](docs/o_backend.md)
