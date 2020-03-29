@@ -1,9 +1,13 @@
 // Módulos
 const express = require('express');
+const cors = require('cors');
 const routes = require('./routes');
 
 // Define a aplicação
 const app = express();
+
+// Permissão de acesso
+app.use(cors());
 
 // Define o JSON para as requisições
 app.use(express.json());
