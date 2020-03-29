@@ -1,12 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+
+import api from '../../services/api';
 
 import './styles.css';
 
 import logoImg from '../../assets/logo.svg';
 
 export default function Register() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [value, setValue] = useState("");
+
+  const history = useHistory();
+
+  const ongId = localStorage.getItem('ongId');
+
+  async function handleNewIncident(event) {
+    event.preventDefault();
+
+    const data = {
+      title,
+      description,
+      value
+    };
+
+    try {
+      await api.post('incidents', data, {
+        headers: {
+          Authorization: ongId
+        }
+      });
+
+      history.push('/profile');
+    } catch (error) {
+      alert("Erro ao cadastrar caso, tente novamente.")
+    }
+  }
+  
   return (
     <div className="new-incident-container">
       <div className="content">
@@ -22,11 +54,22 @@ export default function Register() {
           </Link>
         </section>
 
-        <form>
-          <input placeholder="Título do caso" />
-          <textarea placeholder="Descrição" />
-          <input placeholder="WhatsApp" />
-          <input placeholder="Valor em reais" />
+        <form onSubmit={handleNewIncident}>
+          <input
+            value={title}
+            onChange={event => setTitle(event.target.value)}
+            placeholder="Título do caso"
+          />
+          <textarea
+            value={description}
+            onChange={event => setDescription(event.target.value)}
+            placeholder="Descrição"
+          />
+          <input
+            value={value}
+            onChange={event => setValue(event.target.value)}
+            placeholder="Valor em reais"
+          />
 
           <button type="submit" className="button">Cadastrar</button>
         </form>
