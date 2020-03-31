@@ -1,6 +1,6 @@
 // Módulos
-const crypto = require('crypto');
 const connection = require('../database/connection');
+const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
   async index(req, res) {
@@ -13,7 +13,7 @@ module.exports = {
     const { name, email, whatsapp, city, uf } = req.body;
 
     // Gera uma string
-    const id = crypto.randomBytes(4).toString('HEX');
+    const id = generateUniqueId();
 
     // Insere um novo registro
     await connection('ongs').insert({

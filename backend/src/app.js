@@ -20,4 +20,4 @@ app.use(routes);
 app.use(errors());
 
 // Inicia o servidor
-app.listen(3333, () => console.log('Application running -> localhost:3333'));
+module.exports = app;
